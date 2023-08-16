@@ -8,16 +8,22 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
+    background-color: #05f05f;
     color: white;
 }
 
 #tabela1 td, #tabela1 th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
 }
 
 
 body {
     display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    
 }
