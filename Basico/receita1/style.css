@@ -2,7 +2,8 @@
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     margin-bottom: 20px;
-    display: inline-block; /* Altere para display inline-block */
+    display: inline-block;
+    margin-right: 30px;
 }
 
 
@@ -67,7 +68,7 @@ img {
 
 /* botões */
  
-.button-link {
+.button-link, .button-pag-2, .button-dev {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; 
@@ -76,23 +77,11 @@ img {
     border-radius: 5px; 
     font-weight: bold;
     transition: background-color 0.3s ease; 
+    margin: 1;
 }
 
-.button-link:hover {
+.button-link:hover, .button-pag:hover, .button-dev:hover {
     background-color: #0056b3;
 }
 
-.button-pag-2{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; 
-    color: #fff;
-    text-decoration: none; 
-    border-radius: 5px; 
-    font-weight: bold;
-    transition: background-color 0.3s ease; 
-}
 
-.button-pag-2:hover {
-    background-color: #0056b3;
-}
