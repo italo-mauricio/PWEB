@@ -8,7 +8,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #05f05f;
+    background-color: #007bff;
     color: white;
 }
 
@@ -26,4 +26,19 @@ img {
     max-width: 100%;
     height: auto;
     
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+.button-link:hover {
+    background-color: #0056b3;
 }
