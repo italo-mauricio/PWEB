@@ -4,6 +4,32 @@
     width: 100%;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+}
+
+
+h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 10px; 
+}
+
+
+p {
+    font-size: 1.5rem; 
+    margin-bottom: 20px;
+    padding: 10px; 
+}
+
+
 #tabela1 th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -40,5 +66,20 @@ img {
 }
 
 .button-link:hover {
+    background-color: #0056b3;
+}
+
+.button-pag-2{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+.button-pag-2:hover {
     background-color: #0056b3;
 }
