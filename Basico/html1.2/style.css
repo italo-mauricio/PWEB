@@ -7,7 +7,7 @@ p.mote{
 
 .botao {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background-color: #007bff; 
     color: #fff;
     text-decoration: none; 
@@ -34,3 +34,27 @@ img.poeta {
     border-radius: 50%;
 }
 
+
+
+
+.tabela {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: large;
+}
+
+.tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007bff;
+    color: white;
+}
+
+.tabela td, .tabela th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
