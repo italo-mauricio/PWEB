@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="meu amor"><button id="botao" onclick="carregarDiv()">Carregando cervejas...</button></div>
+</body>
+<script>
+    function carregarDiv(){
+        let div = document.getElementById("meu amor")
+        div.innerHTML = `<h1>Guinnes</h1>`
+        
+    }
+    let botao = document.getElementById("botaoCarregar")
+
+      botao.onclick = carregarDiv
+</script>
+</html>
