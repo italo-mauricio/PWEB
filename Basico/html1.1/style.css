@@ -51,7 +51,7 @@ p {
 
 
 #pag2 {
-    /* display: flex; Remova esta linha */
+
 }
 
 
@@ -63,10 +63,6 @@ img {
 }
 
 
-
-
-
-/* botões */
  
 .button-link, .button-pag-2, .button-dev {
     display: inline-block;
