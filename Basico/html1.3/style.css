@@ -19,3 +19,18 @@ body {
     opacity: 1;
     transition: opacity 1s;
 }
+
+#botaoCarregar{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #007bff; 
+    color: #ffffff;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold;
+    transition: background-color 0.3s ease; 
+}
+
+#botaoCarregar:hover {
+    background-color: #0056b3;
+}
