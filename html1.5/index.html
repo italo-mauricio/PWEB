@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="botoes">
+      <a href="#" id="linkCarregar">Carregar roupas</a>
+      <a href="#" id="linkOrdenar">Mostrar roupas ordenadas</a>
+      <a href="#" id="linkEmbaralhar">Embaralhar roupas</a>
+    </div>
+
+    <div id="meuAmor"></div>
+
+    <script>
+      const roupas = ["Camiseta", "Calça", "Vestido", "Jaqueta", "Bermuda"];
+
+      const transform = (item) => `<div class="roupa">${item}</div>`;
+
+      const transformTable = (itens) => {
+        return `<table><tr><th>Roupa</th></tr>${itens
+          .map((item) => `<tr><td>${item}</td></tr>`)
+          .join("")}</table>`;
+      };
+
+      const loadDiv = (itens) => {
+        const div = document.getElementById("meuAmor");
+        const itensHtml = itens.map(transform);
+        div.innerHTML = itensHtml.join("\n");
+      };
+
+      const sortItems = (itens) => {
+        const div = document.getElementById("meuAmor");
+        const sortedItens = [...itens].sort();
+        div.innerHTML = transformTable(sortedItens);
+      };
+
+      const shuffleItems = (itens) => {
+        const div = document.getElementById("meuAmor");
+        const shuffledItens = [...itens].sort(() => Math.random() - 0.5);
+        div.innerHTML = transformTable(shuffledItens);
+      };
+
+      const linkCarregar = document.getElementById("linkCarregar");
+      linkCarregar.addEventListener("click", () => loadDiv(roupas));
+
+      const linkOrdenar = document.getElementById("linkOrdenar");
+      linkOrdenar.addEventListener("click", () => sortItems(roupas));
+
+      const linkEmbaralhar = document.getElementById("linkEmbaralhar");
+      linkEmbaralhar.addEventListener("click", () => shuffleItems(roupas));
+    </script>
+  </body>
+</html>
