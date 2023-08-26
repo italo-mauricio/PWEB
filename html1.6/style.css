@@ -5,44 +5,54 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    font-family: Arial, sans-serif;
 }
 
-th,
-td {
-    border: 1px solid #dddddd;
+th, td {
+    border: 1px solid #ccc;
     text-align: left;
-    padding: 20px;
+    padding: 12px;
 }
 
 th {
     background-color: #f2f2f2;
+    font-weight: bold;
+    color: #444;
 }
 
 tr:hover {
     background-color: #f5f5f5;
+    transition: background-color 0.3s ease;
 }
 
-#cervejasDiv{
-    margin-top: 50px;
+#cervejasDiv {
+    margin-top: 30px;
     width: 80%;
     max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-#botaoCarregar{
+#botaoCarregar {
     display: inline-block;
-    padding: 10px 10px;
-    background-color: #007bff; 
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #ffffff;
-    text-decoration: none; 
-    border-radius: 5px; 
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
 }
 
 #botaoCarregar:hover {

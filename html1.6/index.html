@@ -1,77 +1,73 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
-  </head>
-
-  <body>
+</head>
+<body>
     <div>
-      <button id="botaoCarregar">Carregando cervejas...</button>
+        <button id="botaoCarregar">Carregando cervejas...</button>
     </div>
 
     <div id="cervejasDiv"></div>
 
     <script>
-      let cervejas = [
-        {
-          name: "Guiness",
-          alcohol: "10%",
-          style: "Stout",
-          ibu: "25",
-        },
-        {
-          name: "Desperados",
-          alcohol: "6%",
-          style: "Lager",
-          ibu: "20",
-        },
-        {
-          name: "Becks",
-          alcohol: "5%",
-          style: "Pilsen",
-          ibu: "18",
-        },
-        {
-          name: "Heineken",
-          alcohol: "9%",
-          style: "Lager",
-          ibu: "40",
-        },
-        {
-          name: "Skol",
-          alcohol: "10  %",
-          style: "Lager",
-          ibu: "30",
-        },
-      ];
+        const cervejas = [
+            {
+                name: "Guiness",
+                alcohol: "10%",
+                style: "Stout",
+                ibu: "25",
+            },
+            {
+                name: "Desperados",
+                alcohol: "6%",
+                style: "Lager",
+                ibu: "20",
+            },
+            {
+                name: "Becks",
+                alcohol: "5%",
+                style: "Pilsen",
+                ibu: "18",
+            },
+            {
+                name: "Heineken",
+                alcohol: "9%",
+                style: "Lager",
+                ibu: "40",
+            },
+            {
+                name: "Skol",
+                alcohol: "10%",
+                style: "Lager",
+                ibu: "30",
+            },
+        ];
 
-      const carregarDiv = (
-        cs,
-        divId = "cervejasDiv",
-        headers = ["Nome", "Álcool", "Estilo", "Amargor"],
-        propertyNames = ["name", "alcohol", "style", "ibu"]
-      ) => {
-        const div = document.getElementById(divId);
+        const carregarDiv = (
+            items,
+            divId = "cervejasDiv",
+            headers = ["Nome", "Álcool", "Estilo", "Amargor"],
+            propertyNames = ["name", "alcohol", "style", "ibu"]
+        ) => {
+            const div = document.getElementById(divId);
 
-        const headerRow = `<tr>${headers
-          .map((header) => `<th>${header}</th>`)
-          .join("")}</tr>`;
+            const headerRow = `<tr>${headers.map(header => `<th>${header}</th>`).join("")}</tr>`;
 
-        const itemsHtml = cs.map((item) => {
-          const cells = propertyNames.map((propertyName) => {
-            const value = item[propertyName] || ""; 
-            return `<td>${value}</td>`;
-          });
-          return `<tr>${cells.join("")}</tr>`;
-        });
+            const itemsHtml = items.map(item => {
+                const cells = propertyNames.map(propertyName => {
+                    const value = item[propertyName] || "";
+                    return `<td>${value}</td>`;
+                });
+                return `<tr>${cells.join("")}</tr>`;
+            });
 
-        div.innerHTML = `<table>${headerRow}${itemsHtml.join("\n")}</table>`;
-      };
+            div.innerHTML = `<table>${headerRow}${itemsHtml.join("\n")}</table>`;
+        };
 
-      const botao = document.getElementById("botaoCarregar");
-      botao.addEventListener("click", () => carregarDiv(cervejas));
+        const botao = document.getElementById("botaoCarregar");
+        botao.addEventListener("click", () => carregarDiv(cervejas));
     </script>
-  </body>
+</body>
 </html>
