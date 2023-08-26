@@ -8,8 +8,9 @@ body {
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 th,
@@ -17,10 +18,15 @@ td {
     border: 1px solid #dddddd;
     text-align: center;
     padding: 20px;
+    background-color: #007bff;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 th {
     background-color: #f2f2f2;
+  font-weight: bold;
+  color: #444;
 }
 
 tr:hover {
