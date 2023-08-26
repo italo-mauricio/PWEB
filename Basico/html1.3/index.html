@@ -1,40 +1,115 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="meuAmor">
-      <h1 class="fade-out">Guinness</h1>
+        <h1 class="fade-out">Guinness</h1>
     </div>
 
     <div id="botaoContainer">
-      <button id="botaoCarregar">Carregar cervejas...</button>
+        <button id="botaoCarregar">Carregar cervejas...</button>
     </div>
 
     <script>
-      function carregarDiv() {
-        let div = document.getElementById("meuAmor");
+        function carregarDiv() {
+            let div = document.getElementById("meuAmor");
 
-        if (div.classList.contains("fade-out")) {
-          div.classList.remove("fade-out");
-          div.classList.add("fade-in");
-          div.innerHTML = "<h1>Guinness</h1>";
-        } else {
-          div.classList.remove("fade-in");
-          div.classList.add("fade-out");
-          setTimeout(() => {
-           dev.innerHTML = "";
-          }, 1000);
+            if (div.classList.contains("fade-out")) {
+                div.classList.remove("fade-out");
+                div.classList.add("fade-in");
+                div.innerHTML = `
+                    <h1>Guinness</h1>
+                    <div id="tab1">
+                            <table class="tabela">
+                            <tr>
+                                <th>Bebida</th>
+                                <th>Preços</th>
+                            </tr>
+                            <tr>
+                                <td>Skol</td>
+                                <td>R$ 3.40</td>
+                            </tr>
+                            <tr>
+                                <td>Kaiser</td>
+                                <td>R$ 2.50</td>
+                            </tr>
+                            <tr>
+                                <td>Itaipava</td>
+                                <td>R$ 3.60</td>
+                            </tr>
+                            <tr>
+                                <td>Budwaiser</td>
+                                <td>R$ 4.50</td>
+                            </tr>
+                            <tr>
+                                <td>Schin</td>
+                                <td>R$ 3.20</td>
+                            </tr>
+                            <tr>
+                                <td>Antartica</td>
+                                <td>R$ 2.50</td>
+                            </tr>
+                            <tr>
+                                <td>Beck</td>
+                                <td>R$ 6.40</td>
+                            </tr>
+                            </table>
+                            <table class="tabela">
+                            <tr>
+                                <th>Bebida</th>
+                                <th>Preços</th>
+                            </tr>
+                            <tr>
+                                <td>Skol</td>
+                                <td>R$ 3.40</td>
+                            </tr>
+                            <tr>
+                                <td>Kaiser</td>
+                                <td>R$ 2.50</td>
+                            </tr>
+                            <tr>
+                                <td>Itaipava</td>
+                                <td>R$ 3.60</td>
+                            </tr>
+                            <tr>
+                                <td>Budwaiser</td>
+                                <td>R$ 4.50</td>
+                            </tr>
+                            <tr>
+                                <td>Schin</td>
+                                <td>R$ 3.20</td>
+                            </tr>
+                            <tr>
+                                <td>Antartica</td>
+                                <td>R$ 2.50</td>
+                            </tr>
+                            <tr>
+                                <td>Beck</td>
+                                <td>R$ 6.40</td>
+                            </tr>
+                            </table>
+                        </div>
+
+                `;
+            } else {
+                div.classList.remove("fade-in");
+                div.classList.add("fade-out");
+                setTimeout(() => {
+                    div.innerHTML = "";
+                }, 1000);
+            }
         }
-      }
 
-      let botao = document.getElementById("botaoCarregar");
+        let botao = document.getElementById("botaoCarregar");
 
-      botao.addEventListener("click", carregarDiv);
+        botao.addEventListener("click", carregarDiv);
     </script>
-  </body>
+</body>
+
 </html>
