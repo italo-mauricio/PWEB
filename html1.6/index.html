@@ -33,6 +33,18 @@
           style: "Pilsen",
           ibu: "18",
         },
+        {
+          name: "Heineken",
+          alcohol: "9%",
+          style: "Lager",
+          ibu: "40",
+        },
+        {
+          name: "Skol",
+          alcohol: "10  %",
+          style: "Lager",
+          ibu: "30",
+        },
       ];
 
       const carregarDiv = (
@@ -49,7 +61,7 @@
 
         const itemsHtml = cs.map((item) => {
           const cells = propertyNames.map((propertyName) => {
-            const value = item[propertyName] || ""; // Empty string if property doesn't exist
+            const value = item[propertyName] || ""; 
             return `<td>${value}</td>`;
           });
           return `<tr>${cells.join("")}</tr>`;
