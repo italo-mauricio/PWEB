@@ -1,43 +1,70 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-}
 
 #botoes {
-    margin-top: 10px;
-}
+    margin-top: 20px; /* Adiciona margem na parte superior */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #botoes a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  #botoes a:hover {
+    background-color: #2980b9;
+  }
+  
 
-#botoes a {
-    margin-right: 10px;
-}
-
-#meuAmor {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px;
-}
-
-table {
+  table {
     border-collapse: collapse;
     width: 100%;
-}
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: rgb(19, 127, 243);
 
-th,
-td {
+  }
+  
+  th, td {
+    border: 1px solid #0056b3;
+    padding: 10px;
+    color: white;
+  }
+  
+  th {
+    background-color: #0000005d;
+  }
+  
+
+  .roupa {
+    padding: 10px;
     border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
+    border-radius: 5px;
+    background-color: #180707;
+    transition: background-color 0.3s;
+    display: inline-block;
+    background-color: #007bff; 
+    color: #fffefe;
+    text-decoration: none; 
+    font-weight: bold;
+    margin: 1;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    font-family: Arial, sans-serif; 
 }
 
-th {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-}
+  

@@ -15,32 +15,44 @@
     <div id="meuAmor"></div>
 
     <script>
-      const roupas = ["Camiseta", "Calça", "Vestido", "Jaqueta", "Bermuda"];
+      const roupas = [
+        { nome: "Camiseta", preco: 29.99 },
+        { nome: "Calça", preco: 59.99 },
+        { nome: "Vestido", preco: 79.99 },
+        { nome: "Jaqueta", preco: 99.99 },
+        { nome: "Bermuda", preco: 39.99 }
+      ];
 
-      const transform = (item) => `<div class="roupa">${item}</div>`;
+      const transform = (item, showPrice) => {
+        if (showPrice) {
+          return `<div class="roupa">${item.nome} - R$ ${item.preco.toFixed(2)}</div>`;
+        } else {
+          return `<div class="roupa">${item.nome}</div>`;
+        }
+      };
 
-      const transformTable = (itens) => {
-        return `<table><tr><th>Roupa</th></tr>${itens
-          .map((item) => `<tr><td>${item}</td></tr>`)
+      const transformTable = (itens, showPrice) => {
+        return `<table><tr><th>Roupa</th>${showPrice ? "<th>Preços</th>" : ""}</tr>${itens
+          .map((item) => `<tr><td>${item.nome}</td>${showPrice ? `<td>R$ ${item.preco.toFixed(2)}</td>` : ""}</tr>`)
           .join("")}</table>`;
       };
 
       const loadDiv = (itens) => {
         const div = document.getElementById("meuAmor");
-        const itensHtml = itens.map(transform);
+        const itensHtml = itens.map((item) => transform(item, false));
         div.innerHTML = itensHtml.join("\n");
       };
 
       const sortItems = (itens) => {
         const div = document.getElementById("meuAmor");
-        const sortedItens = [...itens].sort();
-        div.innerHTML = transformTable(sortedItens);
+        const sortedItens = [...itens].sort((a, b) => a.nome.localeCompare(b.nome));
+        div.innerHTML = transformTable(sortedItens, true);
       };
 
       const shuffleItems = (itens) => {
         const div = document.getElementById("meuAmor");
         const shuffledItens = [...itens].sort(() => Math.random() - 0.5);
-        div.innerHTML = transformTable(shuffledItens);
+        div.innerHTML = transformTable(shuffledItens, true);
       };
 
       const linkCarregar = document.getElementById("linkCarregar");
