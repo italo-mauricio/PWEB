@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <div id="meu amor"><button id="botao" onclick="carregarDiv()">Carregando cervejas...</button></div>
-</body>
-<script>
-    function carregarDiv(){
-        let div = document.getElementById("meu amor")
-        div.innerHTML = `<h1>Guinnes</h1>`
-        
-    }
-    let botao = document.getElementById("botaoCarregar")
-    botao.addEventListener("click", carregarDiv)
-</script>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="meuAmor">
+      <h1 class="fade-out">Guinness</h1>
+    </div>
+
+    <div id="botaoContainer">
+      <button id="botaoCarregar">Carregar cervejas...</button>
+    </div>
+
+    <script>
+      function carregarDiv() {
+        let div = document.getElementById("meuAmor");
+
+        if (div.classList.contains("fade-out")) {
+          div.classList.remove("fade-out");
+          div.classList.add("fade-in");
+          div.innerHTML = "<h1>Guinness</h1>";
+        } else {
+          div.classList.remove("fade-in");
+          div.classList.add("fade-out");
+          setTimeout(() => {
+            dev.innerHTML = "";
+            window.location.href = "html1.3/content/pagina2.html";
+          }, 1000);
+        }
+      }
+
+      let botao = document.getElementById("botaoCarregar");
+
+      botao.addEventListener("click", carregarDiv);
+    </script>
+  </body>
 </html>
