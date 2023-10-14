@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Um</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="/react1.2/libs/react.js"></script>
+    <script src="/react1.2/libs/react-dom.js"></script>
+    <script src="./libs/babel.js"></script>
+    <script type="text/babel">
+        // Componente de Tabela de Bebidas
+        function TabelaBebidas({ bebidas }) {
+            return (
+                <div>
+                    <table className="table">
+                        <thead>
+                            <tr><th>Nome</th><th>Marca</th></tr>
+                        </thead>
+                        <tbody>
+                            {bebidas.map((bebida, index) => (
+                                <tr key={index}>
+                                    <td>{bebida.nome}</td>
+                                    <td>{bebida.marca}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        }
+
+        // Componente de Cabeçalho
+        function Cabecalho() {
+            return <h1>Minha tabela de bebidas</h1>;
+        }
+
+        // Componente de Tabela de Bebidas com Array
+        function TabelaBebidasComArray() {
+            const [showTable, setShowTable] = React.useState(false);
+
+            const toggleTable = () => {
+                setShowTable(!showTable);
+            };
+
+            const returnToInitialView = () => {
+                setShowTable(false);
+            };
+
+            return (
+                <div className="app">
+                    {showTable ? (
+                        <div>
+                            <Cabecalho />
+                            <TabelaBebidas bebidas={bebidas} />
+                            <button id="comeback" onClick={returnToInitialView}>Voltar</button>
+                        </div>
+                    ) : (
+                        <div>
+                            <button onClick={toggleTable}>Mostrar Tabela</button>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+
+        // Componente de App
+        function App() {
+            return (
+                <div className="app">
+                    <TabelaBebidasComArray />
+                </div>
+            );
+        }
+
+        const bebidas = [
+            { nome: "51", marca: "Companhia Müller de Bebidas" },
+            { nome: "Velho Barreiro", marca: "Velho Barreiro" },
+            { nome: "Ypioca", marca: "Ypióca" },
+            { nome: "Heineken", marca: "Heineken" },
+            { nome: "Skol", marca: "Skol" }
+        ];
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById("app")
+        );
+    </script>
+</body>
+
+</html>
