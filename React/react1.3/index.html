@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React 1.3</title>
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script src="libs/react.js"></script>
+    <script src="libs/react-dom.js"></script>
+    <script src="libs/babel.js"></script>
+    <script type="text/babel">
+        class TabelaBebidas extends React.Component {
+            render() {
+                return (
+                    <div id="table">
+                        <h1>{this.props.titulo}</h1>
+                        <table id="tabela" border="1">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Marca</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Havana</td>
+                                    <td>Engenho Anísio Santiago</td>
+                                </tr>
+                                <tr>
+                                    <td>Skol</td>
+                                    <td>Ambev</td>
+                                </tr>
+                                <tr>
+                                    <td>Don Pérignon</td>
+                                    <td>Chardonay</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                );
+            }
+        }
+
+        class OutroComponente extends React.Component {
+            redirectToURL() {
+                window.open("https://github.com/italo-mauricio");
+            }
+
+            render() {
+                return (
+                    <div id="other-component">
+                        <img id="italo" src="https://avatars.githubusercontent.com/u/105960758?v=4" alt="Imagem do programador Italo" />
+                        <div id="content">
+                            <h2>{this.props.titulo}</h2>
+                            <p>Aluno do curso de sistemas de informação na UFRN, javeiro e um programador
+                                véi xibata.</p>
+                            <button onClick={this.redirectToURL}>Mais Sobre</button>
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(
+            <div>
+                <TabelaBebidas titulo="Tabela de Bebidas" />
+                <OutroComponente titulo="Italo Mauricio" />
+            </div>,
+            document.getElementById("app")
+        );
+    </script>
+</body>
+
+</html>
