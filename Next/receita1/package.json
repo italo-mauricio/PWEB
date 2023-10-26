@@ -1,0 +1,14 @@
+{
+  "name": "receita1",
+  "version": "1.0.0",
+  "description": "Primeira Receita de NextJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "italo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
