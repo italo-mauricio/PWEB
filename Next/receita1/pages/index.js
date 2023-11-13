@@ -1,7 +1,7 @@
 import React from 'react';
 import About from './about';
 import Contact from './contact';
-import styles from '../style/Home.module.css';
+import styles from '../style/home.module.css';
 
 export default function Home() {
     return (
