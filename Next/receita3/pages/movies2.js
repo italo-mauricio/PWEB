@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 export default function Movies2() {
     const { data, error } = useSWR(
-        `http://www.omdbapi.com/?apikey=6e8073bf&s=brasil`,
+        `http://www.omdbapi.com/?i=tt3896198&apikey=e7bc56e7=brasil`,
         fetcher
     );
 

@@ -13,7 +13,7 @@ export default function Movies({ data }) {
         }
 
         try {
-            const res = await fetch(`http://www.omdbapi.com/?apikey=6e8073bf&s=${searchQuery}`);
+            const res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=e7bc56e7=${searchQuery}`);
 
             if (!res.ok) {
                 throw new Error(`HTTP error! Status: ${res.status}`);

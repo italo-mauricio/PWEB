@@ -72,7 +72,7 @@ export default function Movies33() {
 
         if (state.url === '' || state.titleSearchString === '') return { Search: '' };
 
-        const res = await fetch(`${state.url}/?apiKey=6e8073bf&s=${state.titleSearchString}`)
+        const res = await fetch(`${state.url}/?i=tt3896198&apikey=e7bc56e7=${state.titleSearchString}`)
 
         if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);

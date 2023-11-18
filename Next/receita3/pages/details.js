@@ -20,7 +20,7 @@ export default function Details() {
         return <div>Loading...</div>;
     }
 
-    const url = `http://www.omdbapi.com/?apikey=6e8073bf&i=${id}`;
+    const url = `http://www.omdbapi.com/?i=tt3896198&apikey=e7bc56e7=${id}`;
     const { data, error } = useSWR(url, fetcher);
 
     if (error) return <div>Error loading movie data...</div>;
