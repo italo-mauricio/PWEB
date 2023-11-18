@@ -16,14 +16,14 @@ export default function Details() {
     const { id } = router.query;
 
     if (!id) {
-        return <div>Loading...</div>;
+        return <div>Carregando...</div>;
     }
 
     const url = `http://www.omdbapi.com/?i=tt3896198&apikey=e7bc56e7=${id}`;
     const { data, error } = useSWR(url, fetcher);
 
-    if (error) return <div>Error loading movie data...</div>;
-    if (!data) return <div>Loading...</div>;
+    if (error) return <div>Erro ao carregar o filme...</div>;
+    if (!data) return <div>Carregando...</div>;
 
     return (
         <div className={styles.container}>

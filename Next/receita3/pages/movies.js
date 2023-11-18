@@ -9,7 +9,7 @@ export default function Movies({ data }) {
 
     const handleSearchClick = async () => {
         if (searchQuery === "") {
-            setSearchQuery('Guardians of the Galaxy Vol. 2');
+            setSearchQuery('Guardians');
         }
 
         try {
