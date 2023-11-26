@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const NavLink = ({ href, text }) => (
   <Link href={href} legacyBehavior>
-    <a className="text-yellow-100 text-lg md:text-2xl px-3 md:px-6 py-2 md:py-4 hover:bg-red-600 hover:rounded-lg transition-colors duration-100">
+    <a className="text-yellow-100 text-lg md:text-2xl px-3 md:px-6 py-2 md:py-4 hover:bg-gray-500 hover:rounded-lg transition-colors duration-100">
       {text}
     </a>
   </Link>
