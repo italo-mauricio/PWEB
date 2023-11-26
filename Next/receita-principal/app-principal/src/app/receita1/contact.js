@@ -1,7 +1,6 @@
 // Importe a imagem no topo do arquivo
 import React from 'react';
 import styles from '../styles/receita1-contact.module.css';
-import instagramLogo from '../public/images/1.png'; // Remova "public" do caminho
 
 function Contact() {
     return (
@@ -11,8 +10,7 @@ function Contact() {
             <ul>
                 <li>
                     <a href="https://www.instagram.com/festadesantanacaicooficial/?hl=pt" target="_blank" rel="noopener noreferrer">
-                        <img src={instagramLogo} alt="" className={styles.instagramLogo} />
-                        Instagram
+                       Instagram
                     </a>
                 </li>
             </ul>

@@ -1,9 +1,9 @@
 import React from 'react';
-import About from './receita1-about';
-import Contact from './receita1-contact';
-import styles from './receita1-index';
+import About from './about';
+import Contact from './contact';
+import styles from '../styles/receita1-home.module.css'
 
-export default function Home() {
+export default function Page() {
     return (
         <div className={styles.container}>
             <h2>Viva Santana!</h2>

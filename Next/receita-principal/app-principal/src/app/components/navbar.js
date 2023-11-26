@@ -14,9 +14,9 @@ export function Navbar(){
       <div className="container mx-auto flex justify-center items-center">
         <div className="hidden md:flex space-x-5 text-3xl font-bold">
         <div className="border-r border-red-400 h-14"></div>
-          <NavLink href="/" text="Home" />
+          <NavLink href="/receita1" text="Receita 1" />
           <div className="border-r border-red-400 h-14"></div>
-          <NavLink href="/card" text="Monsters" />
+          <NavLink href="/receita2" text="Receita 2" />
           <div className="border-r border-red-400 h-14"></div>
           <NavLink href="/cardlist" text="Survivors" />
           <div className="border-r border-red-400 h-14"></div>
