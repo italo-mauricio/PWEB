@@ -1,12 +1,12 @@
 // Importe a imagem no topo do arquivo
 import React from 'react';
-import styles from '../styles/receita1-contact.module.css';
+import styles from '../styles/receita1-contato.module.css';
 import Link from 'next/link';
 
 
 function Contact() {
     return (
-        <div className={styles.contact}>
+        <div className={styles.contato}>
             <h1>Contatos</h1>
             <h2>Caso queira conhecer mais sobre a festa:</h2>
             <ul>

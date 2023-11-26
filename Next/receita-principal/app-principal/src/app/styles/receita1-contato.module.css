@@ -1,28 +1,26 @@
-
-.contact {
+.contato {
     border: 1px solid #ccc;
     padding: 30px;
     background-color: #f7f7f7;
 }
 
-.contact h2 {
+.contato h2 {
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.contact h1 {
+.contato h1 {
     font-size: 20px; 
 }
 
-.contact ul {
+.contato ul {
     list-style: none;
     padding: 0;
 }
 
-.contact li {
+.contato li {
     margin-bottom: 10px;
     text-decoration: none;
     color: #ff008c;
     font-size: 20px; 
 }
-

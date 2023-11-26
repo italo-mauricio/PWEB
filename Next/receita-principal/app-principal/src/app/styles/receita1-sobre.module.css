@@ -1,16 +1,16 @@
-
-.about {
+.sobre, 
+.contato {
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 20px;
     background-color: #f7f7f7;
 }
 
-.about h1 {
-    font-size: 24px;
+.sobre h1 {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.about h2 {
-    font-size: 18px; 
+.sobre h2 {
+    font-size: 10px; 
 }

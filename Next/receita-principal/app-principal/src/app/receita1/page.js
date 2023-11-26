@@ -1,8 +1,8 @@
 import React from 'react';
-import About from './about';
-import Contact from './contact';
+import About from './sobre';
+import Contact from './contato';
 import styles from '../styles/receita1-home.module.css'
-import { Table } from './table';
+import { Table } from './tabela';
 
 export default function Page() {
     return (
