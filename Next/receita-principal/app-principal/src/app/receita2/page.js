@@ -1,14 +1,19 @@
-import NovaPagina from './novaPagina';
-import Contatos from './contatos';
-import styles from '../styles/receita2-home.module.css';
-
+import Principal from "./novaPagina";
 
 export default function Home(){
+
     return (
-        <div className={styles.container}>
-            <h1>Página Inicial</h1>
-            <NovaPagina />
-            <Contatos />
-        </div>
-    );
-}
+ 
+       <div>
+ 
+          <h2>
+ 
+            Viva Santana!
+            <Principal/>
+          </h2>
+ 
+       </div>
+ 
+    )
+ 
+ }

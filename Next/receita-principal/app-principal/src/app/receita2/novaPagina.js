@@ -1,11 +1,34 @@
-function MariaPrea(){
+import Contatos from "./contatos";
+import { Tabela } from "./tabela";
 
+
+
+export default function Principal(){
+
+    let name = 'Skol';
+    let mark = 'Redonda';
     return (
  
-       <h2>Morreu Maria Preá...</h2>
+       <div>
  
-    )
+          <h1>Nova Página</h1>
+            
+          <MariaPrea />
+          <Tabela nome={name} marca={mark}/>
+          <Contatos/>
+ 
+       </div>
+ 
+    );
  
  }
 
- export default MariaPrea;
+export function MariaPrea(){
+
+    return (
+    
+        <h2>Morreu Maria Preá...</h2>
+    
+    )
+    
+}
