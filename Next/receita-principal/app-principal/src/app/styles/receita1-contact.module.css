@@ -1,0 +1,30 @@
+.contact {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.contact h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    margin-bottom: 5px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #ff008c;
+}
+
+.instagramLogo {
+    width: 40px; 
+    height: 40px;
+    margin-right: 5px; 
+  }
