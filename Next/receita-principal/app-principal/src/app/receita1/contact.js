@@ -1,15 +1,17 @@
 // Importe a imagem no topo do arquivo
 import React from 'react';
 import styles from '../styles/receita1-contact.module.css';
+import Link from 'next/link';
+
 
 function Contact() {
     return (
         <div className={styles.contact}>
-            <h2>Contatos</h2>
-            <p>Caso queira conhecer mais sobre a festa:</p>
+            <h1>Contatos</h1>
+            <h2>Caso queira conhecer mais sobre a festa:</h2>
             <ul>
                 <li>
-                    <a href="https://www.instagram.com/festadesantanacaicooficial/?hl=pt" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <Link href="https://www.instagram.com/festadesantanacaicooficial/?hl=pt" target="_blank" rel="noopener noreferrer">Instagram</Link>
                 </li>
             </ul>
         </div>

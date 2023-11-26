@@ -1,19 +1,20 @@
 import Image from "next/image";
 import Link from 'next/link';
 
-
-
-export function Logo(){
-    return (
-        <Link href="/">
-        <div className="rounded-full overflow-hidden mr-0">
+export function Logo() {
+  return (
+    <Link href="/">
+      <div className="flex items-center">
+        <div className="rounded-full overflow-hidden mr-2">
           <Image
             src="/logo2.png"
             width={50}
             height={50}
-            alt="Picture of the author"
+            alt="Logo"
           />
         </div>
-      </Link>
-    )
+        <h1 className="text-4xl md:text-5xl font-bold py-4">NextJS</h1>
+      </div>
+    </Link>
+  );
 }

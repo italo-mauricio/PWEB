@@ -1,5 +1,4 @@
 
-
 .about {
     border: 1px solid #ccc;
     padding: 20px;
@@ -7,11 +6,11 @@
     background-color: #f7f7f7;
 }
 
-.about h2 {
+.about h1 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.about p {
+.about h2 {
     font-size: 18px; 
 }

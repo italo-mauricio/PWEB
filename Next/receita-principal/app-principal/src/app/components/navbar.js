@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
 const NavLink = ({ href, text }) => (
-  <Link href={href}>
-    <div className="text-yellow-100 text-lg md:text-2xl px-3 md:px-6 py-2 md:py-4 hover:bg-red-600 hover:rounded-lg transition-colors duration-100">
+  <Link href={href} legacyBehavior>
+    <a className="text-yellow-100 text-lg md:text-2xl px-3 md:px-6 py-2 md:py-4 hover:bg-red-600 hover:rounded-lg transition-colors duration-100">
       {text}
-    </div>
+    </a>
   </Link>
 );
 
@@ -16,7 +16,7 @@ export function Navbar() {
           <NavLink href="/" text="Home" />
           <NavLink href="/receita1" text="Receita 1" />
           <NavLink href="/receita2" text="Receita 2" />
-          <NavLink href="/cardlist" text="Survivors" />
+          <NavLink href="/" text="Receita 3" />
         </div>
       </div>
     </nav>

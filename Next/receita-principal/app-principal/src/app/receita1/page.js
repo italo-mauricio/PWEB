@@ -2,6 +2,7 @@ import React from 'react';
 import About from './about';
 import Contact from './contact';
 import styles from '../styles/receita1-home.module.css'
+import { Table } from './table';
 
 export default function Page() {
     return (
@@ -14,8 +15,9 @@ export default function Page() {
                     className={styles.santanaImage}
                 />
             </div>
+            <Table />
             <About />
-            <Contact />
+            <Contact />         
         </div>
     );
 }

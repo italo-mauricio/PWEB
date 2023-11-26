@@ -1,0 +1,27 @@
+/* table.module.css */
+
+.mytable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .mytable th, .mytable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .mytable th {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
+  .mytable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .mytable tbody tr:hover {
+    background-color: #cce5ff;
+  }
+  
