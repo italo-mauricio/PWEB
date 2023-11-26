@@ -1,12 +1,17 @@
+
 .contact {
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 30px;
     background-color: #f7f7f7;
 }
 
 .contact h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 20px; 
 }
 
 .contact ul {
@@ -15,16 +20,11 @@
 }
 
 .contact li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .contact a {
     text-decoration: none;
     color: #ff008c;
+    font-size: 20px; 
 }
-
-.instagramLogo {
-    width: 40px; 
-    height: 40px;
-    margin-right: 5px; 
-  }

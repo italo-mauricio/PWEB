@@ -9,9 +9,7 @@ function Contact() {
             <p>Caso queira conhecer mais sobre a festa:</p>
             <ul>
                 <li>
-                    <a href="https://www.instagram.com/festadesantanacaicooficial/?hl=pt" target="_blank" rel="noopener noreferrer">
-                       Instagram
-                    </a>
+                    <a href="https://www.instagram.com/festadesantanacaicooficial/?hl=pt" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </li>
             </ul>
         </div>
