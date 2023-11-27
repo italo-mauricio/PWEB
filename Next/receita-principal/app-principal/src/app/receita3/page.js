@@ -19,8 +19,10 @@ export default function Movies() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-3xl">
-      <div className="mb-8">
-        <Title />
+      <div className="mb-8 ">
+      <div className='p-6 mb-4'>
+        <Title />   
+        </div>
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} handleSearch={handleSearch} />
       </div>
       <SearchResults searchResults={searchResults} />
