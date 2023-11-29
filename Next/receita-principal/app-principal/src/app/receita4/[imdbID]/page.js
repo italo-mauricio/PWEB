@@ -18,13 +18,31 @@ export default function MovieDetail({params}) {
   }
 
   return (
-    <div className='flex flex-col justify-center m-60 items-center'>
-      <h1 className='text-red-600 flex justify-center text-3xl py-6'>{data.Title} ({data.Year})</h1>
-      <img className='border-red-600 border-8 rounded-xl justify-center w-56' src={data.Poster} alt={data.Title} />
-      <p className='flex justify-center text-3xl py-6'>imDB Note: {data.imdbRating}</p>
+    <div>
+      <ButtonReturn onClick={handleReturnClick} />
+      <img src={data.Poster} alt={data.Title} />
+      <h2>Title: {data.Title}</h2>
+      <ul>
+        <li>
+          <p>Released Year: {data.Year}</p>
+        </li>
+        <li>
+          <p>Type: {data.Type}</p>
+        </li>
+        <li>
+          <p>Movie Time: {data.Runtime}</p>
+        </li>
+        <li>
+          <p>Genre: {data.Genre}</p>
+        </li>
+        <li>
+          <p>Plot: {data.Plot}</p>
+        </li>
+      </ul>
     </div>
-  ); 
+  )
 }
+
 
 async function fetcher(url) {
   const res = await fetch(url)
