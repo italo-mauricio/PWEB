@@ -13,7 +13,7 @@ const ButtonReturn = ({ onClick }) => (
 );
 
 const MovieDetail = ({ params }) => {
-  const { data, error } = useSWR(`http://www.omdbapi.com/?apikey=2517b62d&i=${params.imdbID}`, fetcher);
+  const { data, error } = useSWR(`https://www.omdbapi.com/?apikey=2517b62d&i=${params.imdbID}`, fetcher);
   const router = useRouter();
 
   if (error) return <ErrorFallback />;
