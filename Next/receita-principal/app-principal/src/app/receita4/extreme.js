@@ -57,7 +57,6 @@ export function ExtremeAPI() {
   );
 }
 
-// Componente auxiliar para renderizar linhas da tabela
 function TableRow({ label, value }) {
   return (
     <tr>
