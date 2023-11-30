@@ -1,66 +1,68 @@
-
 "use client";
+import React, { useEffect, useState } from "react";
 
-import React, { useEffect, useState } from "react"
-
-export function Home () {
-  const [ipInfo, setIpInfo] = useState(null)
+export function ExtremeAPI() {
+  const [ipInfo, setIpInfo] = useState(null);
 
   useEffect(() => {
-    getIpInfo()
-  }, [])
+    getIpInfo();
+  }, []);
 
   function getIpInfo() {
-    var apiUrl = "https://extreme-ip-lookup.com/json/?key=demo2"
+    var apiUrl = "https://extreme-ip-lookup.com/json/?key=demo2";
 
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
-          throw new Error(`Erro na requisição: ${response.status}`)
+          throw new Error(`Erro na requisição: ${response.status}`);
         }
-        return response.json()
+        return response.json();
       })
       .then((data) => {
-        displayInfo(data)
+        displayInfo(data);
       })
       .catch((error) => {
-        console.error(`Erro de rede: ${error.message}`)
-      })
+        console.error(`Erro de rede: ${error.message}`);
+      });
   }
 
   function displayInfo(data) {
-    setIpInfo(data)
+    setIpInfo(data);
   }
 
   return (
     <div>
-      <h1>Informações de Localização</h1>
-      <div id="info-container">
-        {ipInfo ? (
-          <>
-            <p>
-              <strong>País:</strong> {ipInfo.country}
-            </p>
-            <p>
-              <strong>Cidade:</strong> {ipInfo.city}
-            </p>
-            <p>
-              <strong>Região:</strong> {ipInfo.region}
-            </p>
-            <p>
-              <strong>Continente:</strong> {ipInfo.continent}
-            </p>
-            <p>
-              <strong>Latitude:</strong> {ipInfo.lat}
-            </p>
-            <p>
-              <strong>Longitude:</strong> {ipInfo.lon}
-            </p>
-          </>
-        ) : (
-          <p>Carregando informações...</p>
-        )}
-      </div>
+      <h1 className="text-2xl font-bold mb-4">Informações de Localização</h1>
+      <table className="border-collapse border w-full">
+        <tbody>
+          {ipInfo ? (
+            <>
+              <TableRow label="País" value={ipInfo.country} />
+              <TableRow label="Cidade" value={ipInfo.city} />
+              <TableRow label="Região" value={ipInfo.region} />
+              <TableRow label="Continente" value={ipInfo.continent} />
+              <TableRow label="Latitude" value={ipInfo.lat} />
+              <TableRow label="Longitude" value={ipInfo.lon} />
+            </>
+          ) : (
+            <tr>
+              <td colSpan="2" className="border p-2">
+                Carregando informações...
+              </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
-  )
+  );
+}
+
+// Componente auxiliar para renderizar linhas da tabela
+function TableRow({ label, value }) {
+  return (
+    <tr>
+      <td className="border p-2 font-bold">{label}</td>
+      <td className="border p-2">{value}</td>
+    </tr>
+  );
 }

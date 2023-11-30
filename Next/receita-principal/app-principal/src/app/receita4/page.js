@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import useSWR from "swr";
+import { ExtremeAPI } from "./extreme"; 
 
 export default function Movies2() {
   const { data, error } = useSWR(
@@ -13,6 +14,7 @@ export default function Movies2() {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen pb-16">
+      <ExtremeAPI /> 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {data.Search.map((m) => (
           <div key={m.imdbID} className="mb-8">
