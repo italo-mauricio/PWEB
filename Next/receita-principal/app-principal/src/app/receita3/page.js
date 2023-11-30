@@ -11,7 +11,7 @@ export default function Movies() {
 
   const handleSearch = async () => {
     if (searchQuery) {
-      const res = await fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=2517b62d&s=${searchQuery}`);
+      const res = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=2517b62d&s=${searchQuery}`);
       const searchData = await res.json();
       setSearchResults(searchData.Search || []); 
     }
