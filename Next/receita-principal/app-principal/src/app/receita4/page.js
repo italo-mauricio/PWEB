@@ -12,13 +12,13 @@ export default function Movies2() {
   if (!data) return <div>Carregando...</div>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="flex flex-col justify-center items-center min-h-screen pb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {data.Search.map((m) => (
-          <div key={m.imdbID}>
+          <div key={m.imdbID} className="mb-8">
             <Link href={`/receita4/${m.imdbID}`}>
               <div className="text-center">
-                <img src={m.Poster} alt={m.Title} className="mb-2" />
+                <img src={m.Poster} alt={m.Title} className="mb-4" />
                 <h2 className="text-lg">{m.Title}</h2>
               </div>
             </Link>
@@ -34,5 +34,3 @@ async function fetcher(url) {
   const json = await res.json();
   return json;
 }
-
-
