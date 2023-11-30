@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../styles/receita1-tabela.module.css';
 
 export function Tabela() {
   const data = [
@@ -11,20 +10,20 @@ export function Tabela() {
   ];
 
   return (
-    <table className={styles.tabela}>
+    <table className="min-w-full bg-white border border-gray-300">
       <thead>
-        <tr>
-          <th>Jogo</th>
-          <th>Empresa</th>
-          <th>Preço</th>
+        <tr className="bg-gray-100">
+          <th className="py-2 px-4 border-b">Jogo</th>
+          <th className="py-2 px-4 border-b">Empresa</th>
+          <th className="py-2 px-4 border-b">Preço</th>
         </tr>
       </thead>
       <tbody>
         {data.map((game, index) => (
-          <tr key={index}>
-            <td>{game.jogo}</td>
-            <td>{game.empresa}</td>
-            <td>{game.preco}</td>
+          <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+            <td className="py-2 px-4 border">{game.jogo}</td>
+            <td className="py-2 px-4 border">{game.empresa}</td>
+            <td className="py-2 px-4 border">{game.preco}</td>
           </tr>
         ))}
       </tbody>

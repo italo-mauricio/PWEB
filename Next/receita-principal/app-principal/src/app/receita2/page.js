@@ -1,10 +1,8 @@
-import Contato from './contatos';
-import { Tabela } from './tabela';
+import Contato from './components/contatos';
+import { Tabela } from './components/tabela';
 
 export default function Principal(){
 
-    let name = 'Skol';
-    let mark = 'Redonda';
     return (
  
        <div className="flex flex-col justify-center items-center">
@@ -12,8 +10,8 @@ export default function Principal(){
           <h1 className='text-gray-400 font-bold text-4xl'>Nova Página</h1>
             
           <MariaPrea/>
-          <Tabela nome={name} marca={mark}/>
-          <Contato />
+          <Tabela/>
+          <Contato/>
  
        </div>
  
