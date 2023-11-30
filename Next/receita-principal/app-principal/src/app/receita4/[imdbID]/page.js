@@ -1,51 +1,67 @@
-"use client";
-import useSWR from "swr"
+'use client';
 
-export default function MovieDetail({params}) {
+import { useRouter } from 'next/navigation';
+import useSWR from 'swr';
 
+const ButtonReturn = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 mb-2"
+  >
+    Voltar
+  </button>
+);
 
-  const {data, error} = useSWR(`http://www.omdbapi.com/?apikey=2517b62d&i=${params.imdbID}`, fetcher) 
+const MovieDetail = ({ params }) => {
+  const { data, error } = useSWR(`http://www.omdbapi.com/?apikey=2517b62d&i=${params.imdbID}`, fetcher);
+  const router = useRouter();
 
-  if (error) return <div>Falha na requisição...</div>
-  if (!data) return <div>Carregando...</div>
+  if (error) return <ErrorFallback />;
+  if (!data) return <LoadingFallback />;
 
   const handleReturnClick = () => {
-    router.push("/receita4/")
-  }
-
-  const ButtonReturn = ({ onClick }) => {
-    return <button onClick={onClick}>Voltar</button>
-  }
+    router.push('/receita4');
+  };
 
   return (
-    <div>
-      <ButtonReturn onClick={handleReturnClick} />
-      <img src={data.Poster} alt={data.Title} />
-      <h2>Title: {data.Title}</h2>
-      <ul>
-        <li>
-          <p>Released Year: {data.Year}</p>
-        </li>
-        <li>
-          <p>Type: {data.Type}</p>
-        </li>
-        <li>
-          <p>Movie Time: {data.Runtime}</p>
-        </li>
-        <li>
-          <p>Genre: {data.Genre}</p>
-        </li>
-        <li>
-          <p>Plot: {data.Plot}</p>
-        </li>
-      </ul>
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="flex flex-col">
+        <div className="mt-2 text-2xl">
+          <table className="table-auto">
+            <tbody>
+              <TableRow label="Tittle" value={data.Title} />
+              <TableRow label="Released Year" value={data.Year} />
+              <TableRow label="Type" value={data.Type} />
+              <TableRow label="Movie Time" value={data.Runtime} />
+              <TableRow label="Genre" value={data.Genre} />
+              <TableRow label="Plot" value={data.Plot} />
+            </tbody>
+          </table>
+          <div className='flex items-center justify-center'>
+          <ButtonReturn onClick={handleReturnClick} />
+          </div>
+        </div>
+      </div>
+      <img src={data.Poster} alt={data.Title} className="ml-4" />
     </div>
-  )
-}
+  );
+};
 
+const TableRow = ({ label, value }) => (
+  <tr>
+    <td className="border px-4 py-2">{label}</td>
+    <td className="border px-4 py-2">{value}</td>
+  </tr>
+);
+
+const ErrorFallback = () => <div className="text-center">Falha na requisição...</div>;
+
+const LoadingFallback = () => <div className="text-center">Carregando...</div>;
 
 async function fetcher(url) {
-  const res = await fetch(url)
-  const json = await res.json()
-  return json
+  const res = await fetch(url);
+  const json = await res.json();
+  return json;
 }
+
+export default MovieDetail;
