@@ -4,7 +4,7 @@ import useSWR from "swr"
 
 export default function Movies2() {
   const { data, error } = useSWR(
-    `http://www.omdbapi.com/?i=tt3896198&apikey=2517b62d&s=bagdad`,
+    `https://www.omdbapi.com/?i=tt3896198&apikey=2517b62d&s=bagdad`,
     fetcher
   )
 
