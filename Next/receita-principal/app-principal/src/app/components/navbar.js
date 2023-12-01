@@ -15,7 +15,6 @@ export function Navbar() {
         <div className="flex space-x-5 md:space-x-6 md:justify-center text-lg md:text-2xl font-bold">
           <NavLink href="/" text="Home" />
           <NavLink href="/receita1" text="Sobre" />
-          <NavLink href="/receita2" text="Agradecimentos" />
         </div>
       </div>
     </nav>
