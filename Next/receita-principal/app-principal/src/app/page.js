@@ -54,7 +54,7 @@ export default function Home() {
         {/* Projeto 5 */}
         <div className="bg-white rounded shadow-md p-4">
           <h2 className="text-3xl font-semibold mb-2">Receita 5</h2>
-          <p className="text-gray-600 text-2xl font-bold mb-4">Descrição breve do projeto 5.</p>
+          <p className="text-gray-600 text-2xl font-bold mb-4">Esta receita tem como objetivo criar uma página web simples que exibe um link inicialmente denominado "Mostrar". Quando o link é clicado, a página muda para "Ocultar" e exibe os resultados de uma consulta a um sistema externo. Os principais termos técnicos incluem NextJS, SWR, useState(), React hook, fetch, async, await, JavaScript e HTML</p>
           <Link href="/receita5">
             <div className="mt-4 block bg-gradient-to-r from-black hover:via-gray-800 to-black text-yellow-100 font-bold text-2xl py-2 px-4 rounded">
               Ver Mais
