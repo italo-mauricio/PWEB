@@ -10,7 +10,7 @@ export default function Home() {
         {/* Projeto 1 */}
         <div className="bg-white rounded shadow-md p-4">
           <h2 className="text-3xl font-semibold mb-2">Receita 1</h2>
-          <p className="text-gray-600 text-2xl font-bold mb-4">Descrição breve do projeto 1.</p>
+          <p className="text-gray-600 text-2xl font-bold mb-4">A receita orienta sobre a criação de um projeto Node.js, a instalação do Next.js, a configuração de scripts no arquivo package.json e a criação de páginas. </p>
           <Link href="/receita1">
             <div className="mt-4 block bg-gradient-to-r from-black hover:via-gray-800 to-black text-yellow-100 font-bold text-2xl py-2 px-4 rounded">
               Ver Mais
