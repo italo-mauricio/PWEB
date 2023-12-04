@@ -72,33 +72,11 @@ export default function Home() {
             </div>
           </Link>
         </div>
-
-        {/* Projeto 7 */}
-        <div className="bg-white rounded shadow-md p-4">
-          <h2 className="text-3xl font-semibold mb-2">Receita 7</h2>
-          <p className="text-gray-600 text-2xl font-bold mb-4">Descrição breve do projeto 7.</p>
-          <Link href="/">
-            <div className="mt-4 block bg-gradient-to-r from-black hover:via-gray-800 to-black text-yellow-100 font-bold text-2xl py-2 px-4 rounded">
-              Ver Mais
-            </div>
-          </Link>
-        </div>
-
-        {/* Projeto 8 */}
-        <div className="bg-white rounded shadow-md p-4">
-          <h2 className="text-3xl font-semibold mb-2">Receita 8</h2>
-          <p className="text-gray-600 text-2xl font-bold mb-4">Descrição breve do projeto 8.</p>
-          <Link href="/">
-            <div className="mt-4 block bg-gradient-to-r from-black hover:via-gray-800 to-black text-yellow-100 font-bold text-2xl py-2 px-4 rounded">
-               Ver Mais
-            </div>
-          </Link>
-        </div>
                 {/* Projeto 3 */}
                 <div className="bg-white rounded shadow-md p-4">
-          <h2 className="text-3xl font-semibold mb-2">Receita 3</h2>
-          <p className="text-gray-600 text-2xl font-bold mb-4">Descrição breve do projeto 3.</p>
-          <Link href="/">
+          <h2 className="text-3xl font-semibold mb-2">Receita 9</h2>
+          <p className="text-gray-600 text-2xl font-bold mb-4">Descrição breve do projeto 9.</p>
+          <Link href="/receita9/id">
             <div className="mt-4 block bg-gradient-to-r from-black hover:via-gray-800 to-black text-yellow-100 font-bold text-2xl py-2 px-4 rounded">
                Ver Mais
             </div>
